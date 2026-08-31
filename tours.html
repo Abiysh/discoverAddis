@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tours & Experiences | Discover Addis Tour</title>
+
+    <meta name="description"
+          content="Explore unforgettable Addis Ababa and Ethiopia tours with Discover Addis Tour. Book city tours, cultural experiences, food tours and Ethiopian adventures.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <style>
+
+        /* =====================================================
+           TOURS PAGE
+        ===================================================== */
+
+        .page-hero {
+
+            position: relative;
+
+            min-height: 480px;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 30, 19, .86),
+                    rgba(5, 30, 19, .42)
+                ),
+                url("images/addis-hero.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+        }
+
+
+        .page-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding-top: 80px;
+
+            max-width: 750px;
+
+        }
+
+
+        .page-hero .eyebrow {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .page-hero h1 {
+
+            color: white;
+
+            font-size:
+                clamp(3rem, 6vw, 5.5rem);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .page-hero h1 em {
+
+            color: var(--gold-light);
+
+            font-style: italic;
+
+        }
+
+
+        .page-hero p {
+
+            max-width: 620px;
+
+            color:
+                rgba(255,255,255,.82);
+
+            font-size: 1rem;
+
+        }
+
+
+        /* Breadcrumb */
+
+        .breadcrumbs {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 28px;
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size: .7rem;
+
+        }
+
+
+        .breadcrumbs a:hover {
+
+            color: var(--gold);
+
+        }
+
+
+        .breadcrumbs i {
+
+            font-size: .5rem;
+
+            color: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           TOUR FILTER
+        ===================================================== */
+
+        .tour-filter-section {
+
+            padding: 70px 0 35px;
+
+            background: var(--white);
+
+        }
+
+
+        .tour-filter {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+            padding-bottom: 25px;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .filter-title {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .filter-title strong {
+
+            color: var(--dark);
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 1.4rem;
+
+        }
+
+
+        .filter-title span {
+
+            color: var(--muted);
+
+            font-size: .7rem;
+
+        }
+
+
+        .filter-buttons {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .filter-btn {
+
+            padding: 10px 17px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 30px;
+
+            background: white;
+
+            color: var(--text);
+
+            font-size: .68rem;
+
+            font-weight: 600;
+
+            transition: var(--transition);
+
+        }
+
+
+        .filter-btn:hover,
+        .filter-btn.active {
+
+            background: var(--green);
+
+            border-color: var(--green);
+
+            color: white;
+
+        }
+
+
+        /* =====================================================
+           TOUR LIST
+        ===================================================== */
+
+        .tours-page-section {
+
+            padding: 45px 0 120px;
+
+        }
+
+
+        .tours-grid-page {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 28px;
+
+        }
+
+
+        .tour-page-card {
+
+            overflow: hidden;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            transition: var(--transition);
+
+        }
+
+
+        .tour-page-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                var(--shadow-large);
+
+        }
+
+
+        .tour-page-image {
+
+            position: relative;
+
+            height: 280px;
+
+            overflow: hidden;
+
+        }
+
+
+        .tour-page-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+
+        }
+
+
+        .tour-page-card:hover
+        .tour-page-image img {
+
+            transform: scale(1.07);
+
+        }
+
+
+        .tour-page-badge {
+
+            position: absolute;
+
+            top: 18px;
+
+            left: 18px;
+
+            padding: 7px 11px;
+
+            background: var(--gold);
+
+            color: white;
+
+            font-size: .58rem;
+
+            font-weight: 700;
+
+            letter-spacing: .1em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .tour-page-wishlist {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            width: 38px;
+
+            height: 38px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.92);
+
+            color: var(--green);
+
+            transition: var(--transition);
+
+        }
+
+
+        .tour-page-wishlist:hover {
+
+            background: var(--green);
+
+            color: white;
+
+        }
+
+
+        .tour-page-content {
+
+            padding: 24px;
+
+        }
+
+
+        .tour-page-meta {
+
+            display: flex;
+
+            gap: 18px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .tour-page-meta span {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            color: var(--muted);
+
+            font-size: .63rem;
+
+        }
+
+
+        .tour-page-meta i {
+
+            color: var(--green);
+
+        }
+
+
+        .tour-page-content h3 {
+
+            margin-bottom: 10px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 1.35rem;
+
+        }
+
+
+        .tour-page-content p {
+
+            min-height: 55px;
+
+            color: var(--muted);
+
+            font-size: .76rem;
+
+            line-height: 1.7;
+
+        }
+
+
+        .tour-page-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-top: 22px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .tour-price {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .tour-price small {
+
+            color: var(--muted);
+
+            font-size: .58rem;
+
+        }
+
+
+        .tour-price strong {
+
+            color: var(--green);
+
+            font-size: 1.05rem;
+
+        }
+
+
+        .tour-details-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 11px 15px;
+
+            border-radius: 3px;
+
+            background: var(--dark);
+
+            color: white;
+
+            font-size: .65rem;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+
+        }
+
+
+        .tour-details-btn:hover {
+
+            background: var(--green);
+
+        }
+
+
+        /* =====================================================
+           TOUR CTA
+        ===================================================== */
+
+        .tour-bottom-cta {
+
+            margin-top: 80px;
+
+            padding: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 35px;
+
+            background: var(--cream);
+
+            border-radius: var(--radius);
+
+        }
+
+
+        .tour-bottom-cta h2 {
+
+            margin-top: 5px;
+
+            font-size: 2.6rem;
+
+        }
+
+
+        .tour-bottom-cta h2 em {
+
+            color: var(--green);
+
+            font-style: italic;
+
+        }
+
+
+        .tour-bottom-cta p {
+
+            max-width: 500px;
+
+            margin-top: 12px;
+
+            color: var(--muted);
+
+            font-size: .8rem;
+
+        }
+
+
+        /* =====================================================
+           FILTER ANIMATION
+        ===================================================== */
+
+        .tour-page-card.hidden {
+
+            display: none;
+
+        }
+
+
+        .tour-page-card.show {
+
+            animation:
+                tourAppear .45s ease forwards;
+
+        }
+
+
+        @keyframes tourAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(15px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .tours-grid-page {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .page-hero {
+
+                min-height: 430px;
+
+            }
+
+
+            .page-hero-content {
+
+                padding-top: 90px;
+
+            }
+
+
+            .tour-filter {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+
+            .filter-buttons {
+
+                width: 100%;
+
+            }
+
+
+            .filter-btn {
+
+                flex: 1;
+
+            }
+
+
+            .tours-grid-page {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .tour-bottom-cta {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                padding: 35px 25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .filter-buttons {
+
+                display: grid;
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .filter-btn {
+
+                width: 100%;
+
+            }
+
+
+            .tour-page-image {
+
+                height: 250px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html"
+           class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html"
+               class="active">
+                Tours
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html"
+           class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav"
+         id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html"
+           class="mobile-book">
+
+            Book Your Trip
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="page-hero-content">
+
+            <span class="eyebrow">
+                Explore Ethiopia
+            </span>
+
+            <h1>
+                Tours made for
+                <em>curious travelers.</em>
+            </h1>
+
+            <p>
+                Discover Addis Ababa through local eyes,
+                authentic experiences and unforgettable
+                Ethiopian adventures.
+            </p>
+
+
+            <div class="breadcrumbs">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span>
+                    Tours
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FILTER
+===================================================== -->
+
+<section class="tour-filter-section">
+
+    <div class="container">
+
+        <div class="tour-filter">
+
+            <div class="filter-title">
+
+                <strong>
+                    Find your experience
+                </strong>
+
+                <span>
+                    Choose a category to explore
+                </span>
+
+            </div>
+
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All Tours
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="city">
+
+                    City Tours
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="culture">
+
+                    Culture
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="food">
+
+                    Food & Coffee
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="nature">
+
+                    Nature
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOURS
+===================================================== -->
+
+<section class="tours-page-section">
+
+    <div class="container">
+
+        <div class="tours-grid-page">
+
+
+            <!-- TOUR 1 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="city">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/addis-city.jpg"
+                        alt="Addis Ababa city tour">
+
+                    <span class="tour-page-badge">
+                        Bestseller
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Full Day
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-group"></i>
+                            Private
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Addis Ababa City Tour
+                    </h3>
+
+
+                    <p>
+                        Explore the highlights of Ethiopia's
+                        capital including museums, markets,
+                        historic landmarks and panoramic views.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $45
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=addis-city"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 2 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="city">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/entoto.jpg"
+                        alt="Entoto mountain tour">
+
+                    <span class="tour-page-badge">
+                        Popular
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Half Day
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-user-group"></i>
+                            Private
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Entoto Mountain Experience
+                    </h3>
+
+
+                    <p>
+                        Escape the city and discover spectacular
+                        views, eucalyptus forests and the historic
+                        Entoto area.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $35
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=entoto"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 3 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="food">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/coffee.jpg"
+                        alt="Ethiopian coffee ceremony">
+
+                    <span class="tour-page-badge">
+                        Local Favorite
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            3 Hours
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            Coffee
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Ethiopian Coffee Experience
+                    </h3>
+
+
+                    <p>
+                        Learn about Ethiopia's coffee culture,
+                        visit local cafés and enjoy an authentic
+                        traditional coffee ceremony.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $30
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=coffee"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 4 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="culture">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/ethiopia-culture.jpg"
+                        alt="Ethiopian culture experience">
+
+                    <span class="tour-page-badge">
+                        Cultural
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Full Day
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-landmark"></i>
+                            Culture
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Ethiopian Culture & Heritage
+                    </h3>
+
+
+                    <p>
+                        Experience Ethiopia's fascinating history,
+                        traditions, art, religion and diverse cultural
+                        heritage.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $55
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=culture"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 5 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="nature">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/lake-tana.jpg"
+                        alt="Lake Tana Ethiopia">
+
+                    <span class="tour-page-badge">
+                        Adventure
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Multi Day
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-water"></i>
+                            Nature
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Lake Tana Adventure
+                    </h3>
+
+
+                    <p>
+                        Discover Lake Tana, historic island
+                        monasteries, beautiful landscapes and
+                        fascinating local traditions.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $180
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=lake-tana"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 6 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="nature">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/simien.jpg"
+                        alt="Simien Mountains Ethiopia">
+
+                    <span class="tour-page-badge">
+                        Adventure
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Multi Day
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-mountain"></i>
+                            Hiking
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Simien Mountains Adventure
+                    </h3>
+
+
+                    <p>
+                        Trek through dramatic mountain landscapes,
+                        meet local communities and discover the
+                        unique wildlife of northern Ethiopia.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $250
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=simien"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 7 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="food">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/food-tour.jpg"
+                        alt="Ethiopian food tour">
+
+                    <span class="tour-page-badge">
+                        Food
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            4 Hours
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-utensils"></i>
+                            Food
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Addis Food Discovery
+                    </h3>
+
+
+                    <p>
+                        Taste authentic Ethiopian dishes,
+                        discover local restaurants and learn
+                        how traditional meals are prepared.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $40
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=food"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 8 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="culture">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/lalibela.jpg"
+                        alt="Lalibela Ethiopia">
+
+                    <span class="tour-page-badge">
+                        Heritage
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            3 Days
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-church"></i>
+                            Heritage
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Lalibela Heritage Journey
+                    </h3>
+
+
+                    <p>
+                        Explore the extraordinary rock-hewn
+                        churches of Lalibela and discover one
+                        of Ethiopia's greatest historical treasures.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $320
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=lalibela"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TOUR 9 -->
+
+            <article
+                class="tour-page-card show"
+                data-category="city">
+
+                <div class="tour-page-image">
+
+                    <img
+                        src="images/mercato.jpg"
+                        alt="Mercato Addis Ababa">
+
+                    <span class="tour-page-badge">
+                        Local Life
+                    </span>
+
+                    <button
+                        class="tour-page-wishlist"
+                        aria-label="Add to wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="tour-page-content">
+
+                    <div class="tour-page-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            4 Hours
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-shop"></i>
+                            Shopping
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Mercato & Local Life
+                    </h3>
+
+
+                    <p>
+                        Explore one of Africa's largest open-air
+                        markets, meet local traders and experience
+                        everyday Addis Ababa.
+                    </p>
+
+
+                    <div class="tour-page-bottom">
+
+                        <div class="tour-price">
+
+                            <small>
+                                Starting from
+                            </small>
+
+                            <strong>
+                                $35
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="tour-details.html?tour=mercato"
+                            class="tour-details-btn">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BOTTOM CTA
+        ================================================= -->
+
+        <div class="tour-bottom-cta">
+
+            <div>
+
+                <span class="eyebrow">
+                    Can't find what you want?
+                </span>
+
+                <h2>
+                    Let's create your
+                    <em>perfect trip.</em>
+                </h2>
+
+                <p>
+                    Tell us what you would like to experience
+                    in Ethiopia and our local team will create
+                    a personalized itinerary for you.
+                </p>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="btn btn-gold">
+
+                Plan My Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html"
+               class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="TikTok">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+                <a href="#"
+                   aria-label="Telegram">
+
+                    <i class="fa-brands fa-telegram"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Addis Ababa, Ethiopia
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                +251 900 000 000
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                info@discoveraddistour.com
+
+            </p>
+
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour. All rights reserved.
+        </p>
+
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        /* ================================================
+           TOUR FILTER
+        ================================================ */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".filter-btn"
+            );
+
+
+        const tourCards =
+            document.querySelectorAll(
+                ".tour-page-card"
+            );
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const filter =
+                        button.dataset.filter;
+
+
+                    filterButtons.forEach(btn => {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    tourCards.forEach(card => {
+
+                        const category =
+                            card.dataset.category;
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.classList.remove(
+                                "hidden"
+                            );
+
+                            card.classList.add(
+                                "show"
+                            );
+
+                        } else {
+
+                            card.classList.remove(
+                                "show"
+                            );
+
+                            card.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+
+        /* ================================================
+           WISHLIST
+        ================================================ */
+
+        const wishlistButtons =
+            document.querySelectorAll(
+                ".tour-page-wishlist"
+            );
+
+
+        wishlistButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const icon =
+                        button.querySelector("i");
+
+
+                    icon.classList.toggle(
+                        "fa-regular"
+                    );
+
+                    icon.classList.toggle(
+                        "fa-solid"
+                    );
+
+                }
+            );
+
+        });
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

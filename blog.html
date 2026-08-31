@@ -1,0 +1,3649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Journal | Discover Addis Tour</title>
+
+    <meta name="description"
+          content="Discover Ethiopia travel stories, Addis Ababa guides, culture, food, history and travel tips from Discover Addis Tour.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           BLOG HERO
+        ========================================= */
+
+        .blog-hero {
+            position: relative;
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.68),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/ethiopia-culture.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .blog-hero-content {
+            max-width: 760px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .blog-hero .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .blog-hero h1 {
+            margin: 15px 0 20px;
+
+            color: white;
+
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .98;
+        }
+
+        .blog-hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .blog-hero p {
+            max-width: 600px;
+            margin: auto;
+
+            color: rgba(255,255,255,.8);
+
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           BLOG SECTION
+        ========================================= */
+
+        .blog-section {
+            padding: 100px 0 120px;
+        }
+
+        .blog-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .blog-heading h2 {
+            margin-top: 10px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .blog-heading h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .blog-heading p {
+            margin-top: 18px;
+
+            color: var(--muted);
+
+            font-size: .8rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           CATEGORY FILTER
+        ========================================= */
+
+        .blog-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 40px;
+        }
+
+        .blog-category {
+            padding: 11px 18px;
+
+            border: 1px solid var(--border);
+            border-radius: 30px;
+
+            background: white;
+            color: var(--muted);
+
+            font-family: inherit;
+            font-size: .62rem;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+        .blog-category:hover,
+        .blog-category.active {
+            border-color: var(--green);
+            background: var(--green);
+            color: white;
+        }
+
+
+        /* =========================================
+           FEATURED ARTICLE
+        ========================================= */
+
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+
+            min-height: 450px;
+
+            margin-bottom: 70px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+
+            background: var(--cream);
+        }
+
+        .featured-image {
+            position: relative;
+
+            min-height: 450px;
+
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .7s ease;
+        }
+
+        .featured-post:hover .featured-image img {
+            transform: scale(1.04);
+        }
+
+        .featured-label {
+            position: absolute;
+
+            top: 22px;
+            left: 22px;
+
+            padding: 8px 12px;
+
+            border-radius: 3px;
+
+            background: var(--green);
+            color: white;
+
+            font-size: .52rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 55px;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 15px;
+
+            color: var(--green);
+
+            font-size: .57rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .post-meta i {
+            font-size: .45rem;
+        }
+
+        .featured-content h2 {
+            margin-bottom: 18px;
+
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.08;
+        }
+
+        .featured-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .featured-content p {
+            margin-bottom: 25px;
+
+            color: var(--muted);
+
+            font-size: .76rem;
+            line-height: 1.85;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            width: fit-content;
+
+            color: var(--dark);
+
+            font-size: .63rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .07em;
+
+            transition: var(--transition);
+        }
+
+        .read-more i {
+            transition: transform .3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--green);
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================
+           POSTS GRID
+        ========================================= */
+
+        .posts-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .blog-card {
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            background: white;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .blog-card-image {
+            position: relative;
+
+            height: 250px;
+
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .6s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.06);
+        }
+
+        .blog-card-category {
+            position: absolute;
+
+            top: 18px;
+            left: 18px;
+
+            padding: 7px 10px;
+
+            border-radius: 3px;
+
+            background: white;
+            color: var(--green);
+
+            font-size: .5rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .blog-card-content {
+            padding: 27px;
+        }
+
+        .blog-card-content .post-meta {
+            margin-bottom: 12px;
+        }
+
+        .blog-card-content h3 {
+            margin-bottom: 13px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        .blog-card-content p {
+            margin-bottom: 20px;
+
+            color: var(--muted);
+
+            font-size: .68rem;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           TRAVEL GUIDE
+        ========================================= */
+
+        .guide-section {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .guide-image {
+            height: 560px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .guide-content h2 {
+            margin: 10px 0 20px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .guide-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .guide-content > p {
+            margin-bottom: 30px;
+
+            color: var(--muted);
+
+            font-size: .78rem;
+            line-height: 1.9;
+        }
+
+        .guide-list {
+            display: grid;
+            gap: 14px;
+
+            margin-bottom: 30px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 14px;
+
+            background: white;
+
+            border-radius: 4px;
+        }
+
+        .guide-item i {
+            width: 35px;
+            height: 35px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: var(--cream);
+            color: var(--green);
+
+            font-size: .65rem;
+        }
+
+        .guide-item span {
+            font-size: .67rem;
+            font-weight: 600;
+        }
+
+        .guide-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 15px 24px;
+
+            border-radius: 3px;
+
+            background: var(--green);
+            color: white;
+
+            font-size: .65rem;
+            font-weight: 700;
+        }
+
+        .guide-button:hover {
+            background: var(--dark);
+        }
+
+
+        /* =========================================
+           NEWSLETTER
+        ========================================= */
+
+        .newsletter-section {
+            padding: 100px 0;
+
+            background: var(--dark);
+
+            color: white;
+        }
+
+        .newsletter-inner {
+            max-width: 800px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .newsletter-inner .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .newsletter-inner h2 {
+            margin: 12px 0 18px;
+
+            color: white;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .newsletter-inner h2 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .newsletter-inner p {
+            max-width: 600px;
+            margin: auto auto 28px;
+
+            color: rgba(255,255,255,.7);
+
+            font-size: .76rem;
+            line-height: 1.8;
+        }
+
+        .newsletter-form {
+            display: flex;
+
+            max-width: 550px;
+
+            margin: auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+
+            min-width: 0;
+
+            padding: 16px 18px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 3px 0 0 3px;
+
+            font-family: inherit;
+            font-size: .68rem;
+        }
+
+        .newsletter-form button {
+            padding: 16px 22px;
+
+            border: none;
+
+            border-radius: 0 3px 3px 0;
+
+            background: var(--green);
+            color: white;
+
+            font-family: inherit;
+
+            font-size: .63rem;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--gold);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                min-height: 400px;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-image {
+                height: 450px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .blog-hero {
+                min-height: 450px;
+            }
+
+            .blog-section {
+                padding: 75px 0 90px;
+            }
+
+            .featured-content {
+                padding: 35px 25px;
+            }
+
+            .featured-image {
+                min-height: 300px;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-section {
+                padding: 75px 0;
+            }
+
+            .guide-image {
+                height: 350px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                border-radius: 3px;
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html">
+                Tours
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html" class="active">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html" class="mobile-book">
+            Book Your Trip
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="blog-hero">
+
+    <div class="container">
+
+        <div class="blog-hero-content">
+
+            <span class="eyebrow">
+                Travel Journal
+            </span>
+
+            <h1>
+                Stories from
+                <em>Ethiopia.</em>
+            </h1>
+
+            <p>
+                Travel guides, local stories, culture, food,
+                history and inspiration for your Ethiopian journey.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BLOG
+========================================= -->
+
+<section class="blog-section">
+
+    <div class="container">
+
+
+        <div class="blog-heading">
+
+            <span class="eyebrow">
+                From Our Journal
+            </span>
+
+            <h2>
+                Discover Ethiopia
+                <em>before you arrive.</em>
+            </h2>
+
+            <p>
+                Get practical travel advice and discover the
+                stories behind the places you will visit.
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="blog-categories">
+
+            <button
+                class="blog-category active"
+                data-category="all">
+
+                All Stories
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="addis">
+
+                Addis Ababa
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="culture">
+
+                Culture
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="food">
+
+                Food
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="travel">
+
+                Travel Tips
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="history">
+
+                History
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FEATURED -->
+
+        <article class="featured-post">
+
+            <div class="featured-image">
+
+                <img
+                    src="images/addis-city.jpg"
+                    alt="Addis Ababa city">
+
+                <span class="featured-label">
+                    Featured Story
+                </span>
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <div class="post-meta">
+
+                    <span>
+                        Addis Ababa
+                    </span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    <span>
+                        8 min read
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    First time in Addis Ababa?
+                    <em>Start here.</em>
+                </h2>
+
+
+                <p>
+                    Addis Ababa is more than Ethiopia's capital.
+                    It is a city of coffee, history, art, food,
+                    markets and extraordinary people. Here's how
+                    to make the most of your first visit.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="read-more">
+
+                    Read Story
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- POSTS -->
+
+        <div class="posts-grid" id="postsGrid">
+
+
+            <!-- POST 1 -->
+
+            <article
+                class="blog-card"
+                data-category="food">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/coffee.jpg"
+                        alt="Ethiopian coffee ceremony">
+
+                    <span class="blog-card-category">
+                        Food & Coffee
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Coffee
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        The Ethiopian Coffee Ceremony
+                    </h3>
+
+                    <p>
+                        More than a drink, coffee is a social
+                        tradition and one of the most important
+                        cultural experiences in Ethiopia.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 2 -->
+
+            <article
+                class="blog-card"
+                data-category="travel">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/entoto.jpg"
+                        alt="Entoto Mountain">
+
+                    <span class="blog-card-category">
+                        Travel Tips
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Travel
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Best Things to Do in Addis Ababa
+                    </h3>
+
+                    <p>
+                        From museums and viewpoints to markets
+                        and restaurants, discover experiences you
+                        shouldn't miss in the capital.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 3 -->
+
+            <article
+                class="blog-card"
+                data-category="culture">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/ethiopia-culture.jpg"
+                        alt="Ethiopian culture">
+
+                    <span class="blog-card-category">
+                        Culture
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            7 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Culture
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Understanding Ethiopian Hospitality
+                    </h3>
+
+                    <p>
+                        Learn why hospitality is such an important
+                        part of Ethiopian culture and what visitors
+                        can expect.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 4 -->
+
+            <article
+                class="blog-card"
+                data-category="history">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/lalibela.jpg"
+                        alt="Lalibela">
+
+                    <span class="blog-card-category">
+                        History
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            9 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            History
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        A Journey Through Ethiopian History
+                    </h3>
+
+                    <p>
+                        Discover some of the stories, kingdoms
+                        and ancient traditions that shaped Ethiopia.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 5 -->
+
+            <article
+                class="blog-card"
+                data-category="food">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/food-tour.jpg"
+                        alt="Ethiopian food">
+
+                    <span class="blog-card-category">
+                        Food
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Food
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        What to Eat in Ethiopia
+                    </h3>
+
+                    <p>
+                        From injera and tibs to traditional coffee,
+                        discover flavors you should try during your trip.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 6 -->
+
+            <article
+                class="blog-card"
+                data-category="addis">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/mercato.jpg"
+                        alt="Mercato Addis Ababa">
+
+                    <span class="blog-card-category">
+                        Addis Ababa
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Addis
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Exploring Addis Ababa's Mercato
+                    </h3>
+
+                    <p>
+                        A lively journey through one of the city's
+                        most fascinating markets and commercial areas.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TRAVEL GUIDE
+========================================= -->
+
+<section class="guide-section">
+
+    <div class="container guide-grid">
+
+
+        <div class="guide-image">
+
+            <img
+                src="images/simien.jpg"
+                alt="Ethiopian landscape">
+
+        </div>
+
+
+        <div class="guide-content">
+
+            <span class="eyebrow">
+                Plan Your Journey
+            </span>
+
+            <h2>
+                Ethiopia is waiting.
+                <em>Are you ready?</em>
+            </h2>
+
+            <p>
+                Whether you're visiting Addis Ababa for a day,
+                exploring Ethiopia for several weeks, or looking
+                for a completely personalized experience, our
+                team can help you plan your journey.
+            </p>
+
+
+            <div class="guide-list">
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    <span>
+                        Personalized itineraries
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>
+                        Local guides and experiences
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-car"></i>
+
+                    <span>
+                        Comfortable transportation
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <span>
+                        Travel support throughout your trip
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="guide-button">
+
+                Plan My Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-inner">
+
+            <span class="eyebrow">
+                Stay Inspired
+            </span>
+
+            <h2>
+                Get Ethiopia
+                <em>in your inbox.</em>
+            </h2>
+
+            <p>
+                Travel inspiration, useful tips and new stories
+                from Ethiopia. No spam — just things worth reading.
+            </p>
+
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    aria-label="Email address"
+                    required>
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +251 900 000 000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@discoveraddistour.com
+            </p>
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     WHATSAPP
+========================================= -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           BLOG FILTER
+        ===================================== */
+
+        const categories =
+            document.querySelectorAll(
+                ".blog-category"
+            );
+
+        const posts =
+            document.querySelectorAll(
+                ".blog-card"
+            );
+
+
+        categories.forEach(category => {
+
+            category.addEventListener(
+                "click",
+                function () {
+
+                    categories.forEach(button => {
+
+                        button.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    const selected =
+                        this.dataset.category;
+
+
+                    posts.forEach(post => {
+
+                        if (
+                            selected === "all" ||
+                            post.dataset.category === selected
+                        ) {
+
+                            post.style.display =
+                                "block";
+
+                        } else {
+
+                            post.style.display =
+                                "none";
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+
+        /* =====================================
+           NEWSLETTER
+        ===================================== */
+
+        const newsletter =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        if (newsletter) {
+
+            newsletter.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    const button =
+                        newsletter.querySelector(
+                            "button"
+                        );
+
+                    button.textContent =
+                        "Subscribed ✓";
+
+                    newsletter.reset();
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           YEAR
+        ===================================== */
+
+        document
+            .querySelectorAll(
+                ".current-year"
+            )
+            .forEach(element => {
+
+                element.textContent =
+                    new Date().getFullYear();
+
+            });
+
+    });
+
+</script>
+
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Journal | Discover Addis Tour</title>
+
+    <meta name="description"
+          content="Discover Ethiopia travel stories, Addis Ababa guides, culture, food, history and travel tips from Discover Addis Tour.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           BLOG HERO
+        ========================================= */
+
+        .blog-hero {
+            position: relative;
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.68),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/ethiopia-culture.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .blog-hero-content {
+            max-width: 760px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .blog-hero .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .blog-hero h1 {
+            margin: 15px 0 20px;
+
+            color: white;
+
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .98;
+        }
+
+        .blog-hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .blog-hero p {
+            max-width: 600px;
+            margin: auto;
+
+            color: rgba(255,255,255,.8);
+
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           BLOG SECTION
+        ========================================= */
+
+        .blog-section {
+            padding: 100px 0 120px;
+        }
+
+        .blog-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .blog-heading h2 {
+            margin-top: 10px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .blog-heading h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .blog-heading p {
+            margin-top: 18px;
+
+            color: var(--muted);
+
+            font-size: .8rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           CATEGORY FILTER
+        ========================================= */
+
+        .blog-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 40px;
+        }
+
+        .blog-category {
+            padding: 11px 18px;
+
+            border: 1px solid var(--border);
+            border-radius: 30px;
+
+            background: white;
+            color: var(--muted);
+
+            font-family: inherit;
+            font-size: .62rem;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+        .blog-category:hover,
+        .blog-category.active {
+            border-color: var(--green);
+            background: var(--green);
+            color: white;
+        }
+
+
+        /* =========================================
+           FEATURED ARTICLE
+        ========================================= */
+
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+
+            min-height: 450px;
+
+            margin-bottom: 70px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+
+            background: var(--cream);
+        }
+
+        .featured-image {
+            position: relative;
+
+            min-height: 450px;
+
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .7s ease;
+        }
+
+        .featured-post:hover .featured-image img {
+            transform: scale(1.04);
+        }
+
+        .featured-label {
+            position: absolute;
+
+            top: 22px;
+            left: 22px;
+
+            padding: 8px 12px;
+
+            border-radius: 3px;
+
+            background: var(--green);
+            color: white;
+
+            font-size: .52rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 55px;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 15px;
+
+            color: var(--green);
+
+            font-size: .57rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .post-meta i {
+            font-size: .45rem;
+        }
+
+        .featured-content h2 {
+            margin-bottom: 18px;
+
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.08;
+        }
+
+        .featured-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .featured-content p {
+            margin-bottom: 25px;
+
+            color: var(--muted);
+
+            font-size: .76rem;
+            line-height: 1.85;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            width: fit-content;
+
+            color: var(--dark);
+
+            font-size: .63rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .07em;
+
+            transition: var(--transition);
+        }
+
+        .read-more i {
+            transition: transform .3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--green);
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+
+        /* =========================================
+           POSTS GRID
+        ========================================= */
+
+        .posts-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .blog-card {
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            background: white;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .blog-card-image {
+            position: relative;
+
+            height: 250px;
+
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .6s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.06);
+        }
+
+        .blog-card-category {
+            position: absolute;
+
+            top: 18px;
+            left: 18px;
+
+            padding: 7px 10px;
+
+            border-radius: 3px;
+
+            background: white;
+            color: var(--green);
+
+            font-size: .5rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .blog-card-content {
+            padding: 27px;
+        }
+
+        .blog-card-content .post-meta {
+            margin-bottom: 12px;
+        }
+
+        .blog-card-content h3 {
+            margin-bottom: 13px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        .blog-card-content p {
+            margin-bottom: 20px;
+
+            color: var(--muted);
+
+            font-size: .68rem;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           TRAVEL GUIDE
+        ========================================= */
+
+        .guide-section {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .guide-image {
+            height: 560px;
+
+            overflow: hidden;
+
+            border-radius: var(--radius);
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .guide-content h2 {
+            margin: 10px 0 20px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .guide-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .guide-content > p {
+            margin-bottom: 30px;
+
+            color: var(--muted);
+
+            font-size: .78rem;
+            line-height: 1.9;
+        }
+
+        .guide-list {
+            display: grid;
+            gap: 14px;
+
+            margin-bottom: 30px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 14px;
+
+            background: white;
+
+            border-radius: 4px;
+        }
+
+        .guide-item i {
+            width: 35px;
+            height: 35px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: var(--cream);
+            color: var(--green);
+
+            font-size: .65rem;
+        }
+
+        .guide-item span {
+            font-size: .67rem;
+            font-weight: 600;
+        }
+
+        .guide-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 15px 24px;
+
+            border-radius: 3px;
+
+            background: var(--green);
+            color: white;
+
+            font-size: .65rem;
+            font-weight: 700;
+        }
+
+        .guide-button:hover {
+            background: var(--dark);
+        }
+
+
+        /* =========================================
+           NEWSLETTER
+        ========================================= */
+
+        .newsletter-section {
+            padding: 100px 0;
+
+            background: var(--dark);
+
+            color: white;
+        }
+
+        .newsletter-inner {
+            max-width: 800px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .newsletter-inner .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .newsletter-inner h2 {
+            margin: 12px 0 18px;
+
+            color: white;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .newsletter-inner h2 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .newsletter-inner p {
+            max-width: 600px;
+            margin: auto auto 28px;
+
+            color: rgba(255,255,255,.7);
+
+            font-size: .76rem;
+            line-height: 1.8;
+        }
+
+        .newsletter-form {
+            display: flex;
+
+            max-width: 550px;
+
+            margin: auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+
+            min-width: 0;
+
+            padding: 16px 18px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 3px 0 0 3px;
+
+            font-family: inherit;
+            font-size: .68rem;
+        }
+
+        .newsletter-form button {
+            padding: 16px 22px;
+
+            border: none;
+
+            border-radius: 0 3px 3px 0;
+
+            background: var(--green);
+            color: white;
+
+            font-family: inherit;
+
+            font-size: .63rem;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--gold);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                min-height: 400px;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-image {
+                height: 450px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .blog-hero {
+                min-height: 450px;
+            }
+
+            .blog-section {
+                padding: 75px 0 90px;
+            }
+
+            .featured-content {
+                padding: 35px 25px;
+            }
+
+            .featured-image {
+                min-height: 300px;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-section {
+                padding: 75px 0;
+            }
+
+            .guide-image {
+                height: 350px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                border-radius: 3px;
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html">
+                Tours
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html" class="active">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html" class="mobile-book">
+            Book Your Trip
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="blog-hero">
+
+    <div class="container">
+
+        <div class="blog-hero-content">
+
+            <span class="eyebrow">
+                Travel Journal
+            </span>
+
+            <h1>
+                Stories from
+                <em>Ethiopia.</em>
+            </h1>
+
+            <p>
+                Travel guides, local stories, culture, food,
+                history and inspiration for your Ethiopian journey.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BLOG
+========================================= -->
+
+<section class="blog-section">
+
+    <div class="container">
+
+
+        <div class="blog-heading">
+
+            <span class="eyebrow">
+                From Our Journal
+            </span>
+
+            <h2>
+                Discover Ethiopia
+                <em>before you arrive.</em>
+            </h2>
+
+            <p>
+                Get practical travel advice and discover the
+                stories behind the places you will visit.
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="blog-categories">
+
+            <button
+                class="blog-category active"
+                data-category="all">
+
+                All Stories
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="addis">
+
+                Addis Ababa
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="culture">
+
+                Culture
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="food">
+
+                Food
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="travel">
+
+                Travel Tips
+
+            </button>
+
+            <button
+                class="blog-category"
+                data-category="history">
+
+                History
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FEATURED -->
+
+        <article class="featured-post">
+
+            <div class="featured-image">
+
+                <img
+                    src="images/addis-city.jpg"
+                    alt="Addis Ababa city">
+
+                <span class="featured-label">
+                    Featured Story
+                </span>
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <div class="post-meta">
+
+                    <span>
+                        Addis Ababa
+                    </span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    <span>
+                        8 min read
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    First time in Addis Ababa?
+                    <em>Start here.</em>
+                </h2>
+
+
+                <p>
+                    Addis Ababa is more than Ethiopia's capital.
+                    It is a city of coffee, history, art, food,
+                    markets and extraordinary people. Here's how
+                    to make the most of your first visit.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="read-more">
+
+                    Read Story
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- POSTS -->
+
+        <div class="posts-grid" id="postsGrid">
+
+
+            <!-- POST 1 -->
+
+            <article
+                class="blog-card"
+                data-category="food">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/coffee.jpg"
+                        alt="Ethiopian coffee ceremony">
+
+                    <span class="blog-card-category">
+                        Food & Coffee
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Coffee
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        The Ethiopian Coffee Ceremony
+                    </h3>
+
+                    <p>
+                        More than a drink, coffee is a social
+                        tradition and one of the most important
+                        cultural experiences in Ethiopia.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 2 -->
+
+            <article
+                class="blog-card"
+                data-category="travel">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/entoto.jpg"
+                        alt="Entoto Mountain">
+
+                    <span class="blog-card-category">
+                        Travel Tips
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Travel
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Best Things to Do in Addis Ababa
+                    </h3>
+
+                    <p>
+                        From museums and viewpoints to markets
+                        and restaurants, discover experiences you
+                        shouldn't miss in the capital.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 3 -->
+
+            <article
+                class="blog-card"
+                data-category="culture">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/ethiopia-culture.jpg"
+                        alt="Ethiopian culture">
+
+                    <span class="blog-card-category">
+                        Culture
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            7 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Culture
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Understanding Ethiopian Hospitality
+                    </h3>
+
+                    <p>
+                        Learn why hospitality is such an important
+                        part of Ethiopian culture and what visitors
+                        can expect.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 4 -->
+
+            <article
+                class="blog-card"
+                data-category="history">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/lalibela.jpg"
+                        alt="Lalibela">
+
+                    <span class="blog-card-category">
+                        History
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            9 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            History
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        A Journey Through Ethiopian History
+                    </h3>
+
+                    <p>
+                        Discover some of the stories, kingdoms
+                        and ancient traditions that shaped Ethiopia.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 5 -->
+
+            <article
+                class="blog-card"
+                data-category="food">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/food-tour.jpg"
+                        alt="Ethiopian food">
+
+                    <span class="blog-card-category">
+                        Food
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            6 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Food
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        What to Eat in Ethiopia
+                    </h3>
+
+                    <p>
+                        From injera and tibs to traditional coffee,
+                        discover flavors you should try during your trip.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- POST 6 -->
+
+            <article
+                class="blog-card"
+                data-category="addis">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/mercato.jpg"
+                        alt="Mercato Addis Ababa">
+
+                    <span class="blog-card-category">
+                        Addis Ababa
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="post-meta">
+
+                        <span>
+                            5 min read
+                        </span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Addis
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Exploring Addis Ababa's Mercato
+                    </h3>
+
+                    <p>
+                        A lively journey through one of the city's
+                        most fascinating markets and commercial areas.
+                    </p>
+
+                    <a href="#" class="read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TRAVEL GUIDE
+========================================= -->
+
+<section class="guide-section">
+
+    <div class="container guide-grid">
+
+
+        <div class="guide-image">
+
+            <img
+                src="images/simien.jpg"
+                alt="Ethiopian landscape">
+
+        </div>
+
+
+        <div class="guide-content">
+
+            <span class="eyebrow">
+                Plan Your Journey
+            </span>
+
+            <h2>
+                Ethiopia is waiting.
+                <em>Are you ready?</em>
+            </h2>
+
+            <p>
+                Whether you're visiting Addis Ababa for a day,
+                exploring Ethiopia for several weeks, or looking
+                for a completely personalized experience, our
+                team can help you plan your journey.
+            </p>
+
+
+            <div class="guide-list">
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    <span>
+                        Personalized itineraries
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>
+                        Local guides and experiences
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-car"></i>
+
+                    <span>
+                        Comfortable transportation
+                    </span>
+
+                </div>
+
+
+                <div class="guide-item">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <span>
+                        Travel support throughout your trip
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="guide-button">
+
+                Plan My Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-inner">
+
+            <span class="eyebrow">
+                Stay Inspired
+            </span>
+
+            <h2>
+                Get Ethiopia
+                <em>in your inbox.</em>
+            </h2>
+
+            <p>
+                Travel inspiration, useful tips and new stories
+                from Ethiopia. No spam — just things worth reading.
+            </p>
+
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    aria-label="Email address"
+                    required>
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +251 900 000 000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@discoveraddistour.com
+            </p>
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     WHATSAPP
+========================================= -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           BLOG FILTER
+        ===================================== */
+
+        const categories =
+            document.querySelectorAll(
+                ".blog-category"
+            );
+
+        const posts =
+            document.querySelectorAll(
+                ".blog-card"
+            );
+
+
+        categories.forEach(category => {
+
+            category.addEventListener(
+                "click",
+                function () {
+
+                    categories.forEach(button => {
+
+                        button.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    const selected =
+                        this.dataset.category;
+
+
+                    posts.forEach(post => {
+
+                        if (
+                            selected === "all" ||
+                            post.dataset.category === selected
+                        ) {
+
+                            post.style.display =
+                                "block";
+
+                        } else {
+
+                            post.style.display =
+                                "none";
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+
+        /* =====================================
+           NEWSLETTER
+        ===================================== */
+
+        const newsletter =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        if (newsletter) {
+
+            newsletter.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    const button =
+                        newsletter.querySelector(
+                            "button"
+                        );
+
+                    button.textContent =
+                        "Subscribed ✓";
+
+                    newsletter.reset();
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================
+           YEAR
+        ===================================== */
+
+        document
+            .querySelectorAll(
+                ".current-year"
+            )
+            .forEach(element => {
+
+                element.textContent =
+                    new Date().getFullYear();
+
+            });
+
+    });
+
+</script>
+
+
+</body>
+</html>

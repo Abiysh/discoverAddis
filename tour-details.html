@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tour Details | Discover Addis Tour</title>
+
+    <meta name="description"
+          content="Discover detailed tour information, itinerary, pricing and booking options with Discover Addis Tour.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =====================================================
+           TOUR DETAILS
+        ===================================================== */
+
+        .details-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,.05),
+                    rgba(0,0,0,.78)
+                ),
+                url("images/addis-city.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .details-hero-content {
+            width: 100%;
+            padding: 90px 0 55px;
+        }
+
+        .details-hero .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .details-hero h1 {
+            max-width: 850px;
+            margin: 10px 0 18px;
+            color: white;
+            font-size: clamp(2.8rem, 6vw, 5.2rem);
+        }
+
+        .details-hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .details-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .details-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,.85);
+            font-size: .72rem;
+        }
+
+        .details-meta i {
+            color: var(--gold-light);
+        }
+
+        /* =====================================================
+           MAIN LAYOUT
+        ===================================================== */
+
+        .details-section {
+            padding: 90px 0 120px;
+        }
+
+        .details-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 350px;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .details-main h2 {
+            margin-bottom: 18px;
+            font-size: 2.2rem;
+        }
+
+        .details-main h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .details-main > p {
+            margin-bottom: 22px;
+            color: var(--muted);
+            font-size: .86rem;
+            line-height: 1.9;
+        }
+
+        /* =====================================================
+           HIGHLIGHTS
+        ===================================================== */
+
+        .tour-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 35px 0 55px;
+        }
+
+        .highlight {
+            padding: 20px;
+            background: var(--cream);
+            border-radius: var(--radius);
+        }
+
+        .highlight i {
+            margin-bottom: 12px;
+            color: var(--green);
+            font-size: 1.2rem;
+        }
+
+        .highlight strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--dark);
+            font-size: .75rem;
+        }
+
+        .highlight span {
+            color: var(--muted);
+            font-size: .65rem;
+        }
+
+        /* =====================================================
+           ITINERARY
+        ===================================================== */
+
+        .itinerary {
+            margin-top: 35px;
+        }
+
+        .itinerary-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: 85px 1fr;
+            gap: 22px;
+            padding-bottom: 35px;
+        }
+
+        .itinerary-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 45px;
+            left: 40px;
+            width: 1px;
+            height: calc(100% - 45px);
+            background: var(--border);
+        }
+
+        .day-number {
+            position: relative;
+            z-index: 2;
+            width: 80px;
+            height: 80px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--green);
+            border-radius: 50%;
+            background: white;
+            color: var(--green);
+            font-family: "Playfair Display", serif;
+            font-size: .9rem;
+        }
+
+        .itinerary-content h3 {
+            margin: 8px 0 8px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.3rem;
+        }
+
+        .itinerary-content p {
+            color: var(--muted);
+            font-size: .76rem;
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           INCLUDED
+        ===================================================== */
+
+        .included-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .included-box {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .included-box h3 {
+            margin-bottom: 20px;
+            font-family: "Playfair Display", serif;
+        }
+
+        .included-box ul {
+            display: grid;
+            gap: 12px;
+        }
+
+        .included-box li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--muted);
+            font-size: .72rem;
+        }
+
+        .included-box li i {
+            margin-top: 3px;
+            color: var(--green);
+        }
+
+        .excluded-box li i {
+            color: #a34b3d;
+        }
+
+        /* =====================================================
+           BOOKING CARD
+        ===================================================== */
+
+        .booking-card {
+            position: sticky;
+            top: 110px;
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-large);
+        }
+
+        .booking-card-label {
+            color: var(--muted);
+            font-size: .62rem;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+        }
+
+        .booking-price {
+            margin: 8px 0 25px;
+            color: var(--green);
+            font-family: "Playfair Display", serif;
+            font-size: 2.5rem;
+        }
+
+        .booking-price small {
+            color: var(--muted);
+            font-family: "DM Sans", sans-serif;
+            font-size: .65rem;
+        }
+
+        .booking-divider {
+            height: 1px;
+            margin: 22px 0;
+            background: var(--border);
+        }
+
+        .booking-info {
+            display: grid;
+            gap: 15px;
+        }
+
+        .booking-info div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .booking-info span {
+            color: var(--muted);
+            font-size: .68rem;
+        }
+
+        .booking-info strong {
+            color: var(--dark);
+            font-size: .7rem;
+        }
+
+        .booking-card label {
+            display: block;
+            margin: 18px 0 7px;
+            color: var(--dark);
+            font-size: .67rem;
+            font-weight: 700;
+        }
+
+        .booking-card input,
+        .booking-card select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            background: white;
+            color: var(--text);
+            font-family: inherit;
+            font-size: .7rem;
+            outline: none;
+        }
+
+        .booking-card input:focus,
+        .booking-card select:focus {
+            border-color: var(--green);
+        }
+
+        .booking-btn {
+            width: 100%;
+            margin-top: 22px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none;
+            border-radius: 3px;
+            background: var(--green);
+            color: white;
+            font-weight: 700;
+            font-size: .7rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .booking-btn:hover {
+            background: var(--dark);
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 3px;
+            background: #25D366;
+            color: white;
+            font-weight: 700;
+            font-size: .7rem;
+        }
+
+        .whatsapp-btn:hover {
+            opacity: .9;
+        }
+
+        .booking-note {
+            margin-top: 16px;
+            color: var(--muted);
+            text-align: center;
+            font-size: .58rem;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           RELATED TOURS
+        ===================================================== */
+
+        .related-section {
+            padding: 90px 0;
+            background: var(--cream);
+        }
+
+        .related-heading {
+            margin-bottom: 40px;
+        }
+
+        .related-heading h2 {
+            margin-top: 7px;
+            font-size: 2.5rem;
+        }
+
+        .related-heading h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .related-card {
+            overflow: hidden;
+            background: white;
+            border-radius: var(--radius);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 22px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 15px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.2rem;
+        }
+
+        .related-content a {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: var(--green);
+            font-size: .65rem;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .details-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-card {
+                position: static;
+            }
+
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .details-hero {
+                min-height: 450px;
+            }
+
+            .tour-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .included-section {
+                grid-template-columns: 1fr;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .itinerary-item {
+                grid-template-columns: 65px 1fr;
+            }
+
+            .day-number {
+                width: 60px;
+                height: 60px;
+                font-size: .7rem;
+            }
+
+            .itinerary-item:not(:last-child)::after {
+                left: 30px;
+                top: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html" class="active">
+                Tours
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button class="mobile-menu"
+                id="mobileMenu"
+                aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html" class="mobile-book">
+            Book Your Trip
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     TOUR HERO
+===================================================== -->
+
+<section class="details-hero" id="tourHero">
+
+    <div class="container details-hero-content">
+
+        <span class="eyebrow">
+            Discover Ethiopia
+        </span>
+
+        <h1 id="tourTitle">
+            Addis Ababa
+            <em>City Tour</em>
+        </h1>
+
+        <div class="details-meta">
+
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                <span id="tourDuration">
+                    Full Day
+                </span>
+            </span>
+
+            <span>
+                <i class="fa-solid fa-user-group"></i>
+                Private Tour
+            </span>
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DETAILS
+===================================================== -->
+
+<section class="details-section">
+
+    <div class="container details-layout">
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="details-main">
+
+            <span class="eyebrow">
+                The Experience
+            </span>
+
+            <h2>
+                Discover Addis through
+                <em>local eyes.</em>
+            </h2>
+
+            <p id="tourDescription">
+                Explore the fascinating capital of Ethiopia
+                on a carefully designed journey through its
+                history, culture, food and everyday life.
+                This private experience combines the city's
+                most important landmarks with authentic local
+                moments.
+            </p>
+
+
+            <!-- HIGHLIGHTS -->
+
+            <div class="tour-highlights">
+
+                <div class="highlight">
+
+                    <i class="fa-solid fa-calendar-day"></i>
+
+                    <strong>
+                        Flexible
+                    </strong>
+
+                    <span>
+                        Choose your preferred date
+                    </span>
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <strong>
+                        Local Guide
+                    </strong>
+
+                    <span>
+                        Experienced Ethiopian guide
+                    </span>
+
+                </div>
+
+
+                <div class="highlight">
+
+                    <i class="fa-solid fa-car"></i>
+
+                    <strong>
+                        Comfortable
+                    </strong>
+
+                    <span>
+                        Private transportation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ITINERARY -->
+
+            <span class="eyebrow">
+                Your Day
+            </span>
+
+            <h2>
+                Tour <em>itinerary</em>
+            </h2>
+
+
+            <div class="itinerary">
+
+
+                <div class="itinerary-item">
+
+                    <div class="day-number">
+                        01
+                    </div>
+
+                    <div class="itinerary-content">
+
+                        <h3>
+                            Morning — City Introduction
+                        </h3>
+
+                        <p>
+                            Meet your local guide and begin your
+                            Addis Ababa adventure. Learn about the
+                            history and development of Ethiopia's
+                            capital while exploring the city's
+                            central areas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="itinerary-item">
+
+                    <div class="day-number">
+                        02
+                    </div>
+
+                    <div class="itinerary-content">
+
+                        <h3>
+                            Midday — Culture & Heritage
+                        </h3>
+
+                        <p>
+                            Visit important cultural and historical
+                            sites and discover stories that shaped
+                            Ethiopia. Your guide will explain the
+                            traditions and history behind each place.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="itinerary-item">
+
+                    <div class="day-number">
+                        03
+                    </div>
+
+                    <div class="itinerary-content">
+
+                        <h3>
+                            Afternoon — Local Life
+                        </h3>
+
+                        <p>
+                            Experience the rhythm of Addis Ababa,
+                            explore local neighborhoods and markets,
+                            and enjoy an authentic Ethiopian coffee
+                            experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="itinerary-item">
+
+                    <div class="day-number">
+                        04
+                    </div>
+
+                    <div class="itinerary-content">
+
+                        <h3>
+                            Evening — Farewell
+                        </h3>
+
+                        <p>
+                            Finish the experience with panoramic
+                            views and time to ask your guide questions
+                            about Ethiopia, travel and local life.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INCLUDED -->
+
+            <span class="eyebrow">
+                Good to Know
+            </span>
+
+            <h2>
+                What's <em>included?</em>
+            </h2>
+
+
+            <div class="included-section">
+
+
+                <div class="included-box">
+
+                    <h3>
+                        Included
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Professional local guide
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Private transportation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Hotel pickup and drop-off
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Bottled drinking water
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Coffee experience
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="included-box excluded-box">
+
+                    <h3>
+                        Not Included
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            Personal shopping
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            Personal expenses
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            Lunch unless specified
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            International flights
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+
+        <!-- BOOKING CARD -->
+
+        <aside class="booking-card">
+
+            <span class="booking-card-label">
+                Tour price
+            </span>
+
+            <div class="booking-price">
+
+                <span id="tourPrice">
+                    $45
+                </span>
+
+                <small>
+                    / person
+                </small>
+
+            </div>
+
+
+            <div class="booking-info">
+
+                <div>
+
+                    <span>
+                        Duration
+                    </span>
+
+                    <strong id="bookingDuration">
+                        Full Day
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Tour type
+                    </span>
+
+                    <strong>
+                        Private
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Guide
+                    </span>
+
+                    <strong>
+                        Included
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-divider"></div>
+
+
+            <form id="bookingForm">
+
+                <label for="bookingDate">
+                    Preferred Date
+                </label>
+
+                <input
+                    type="date"
+                    id="bookingDate"
+                    required
+                >
+
+
+                <label for="guests">
+                    Number of Guests
+                </label>
+
+                <select id="guests">
+
+                    <option value="1">
+                        1 Guest
+                    </option>
+
+                    <option value="2">
+                        2 Guests
+                    </option>
+
+                    <option value="3">
+                        3 Guests
+                    </option>
+
+                    <option value="4">
+                        4 Guests
+                    </option>
+
+                    <option value="5">
+                        5 Guests
+                    </option>
+
+                    <option value="6">
+                        6+ Guests
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="booking-btn">
+
+                    Request to Book
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <a
+                href="https://wa.me/251900000000"
+                class="whatsapp-btn"
+                target="_blank">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Book via WhatsApp
+
+            </a>
+
+
+            <p class="booking-note">
+
+                No payment required to send a booking request.
+                Our team will contact you to confirm availability.
+
+            </p>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RELATED TOURS
+===================================================== -->
+
+<section class="related-section">
+
+    <div class="container">
+
+        <div class="related-heading">
+
+            <span class="eyebrow">
+                Keep Exploring
+            </span>
+
+            <h2>
+                More <em>experiences</em>
+            </h2>
+
+        </div>
+
+
+        <div class="related-grid">
+
+
+            <article class="related-card">
+
+                <img
+                    src="images/entoto.jpg"
+                    alt="Entoto Mountain">
+
+                <div class="related-content">
+
+                    <h3>
+                        Entoto Mountain Experience
+                    </h3>
+
+                    <a href="tour-details.html?tour=entoto">
+
+                        Explore Tour
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="related-card">
+
+                <img
+                    src="images/coffee.jpg"
+                    alt="Ethiopian Coffee">
+
+                <div class="related-content">
+
+                    <h3>
+                        Ethiopian Coffee Experience
+                    </h3>
+
+                    <a href="tour-details.html?tour=coffee">
+
+                        Explore Tour
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="related-card">
+
+                <img
+                    src="images/lalibela.jpg"
+                    alt="Lalibela">
+
+                <div class="related-content">
+
+                    <h3>
+                        Lalibela Heritage Journey
+                    </h3>
+
+                    <a href="tour-details.html?tour=lalibela">
+
+                        Explore Tour
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +251 900 000 000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@discoveraddistour.com
+            </p>
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       TOUR DATA
+    ===================================================== */
+
+    const tours = {
+
+        "addis-city": {
+
+            title: "Addis Ababa <em>City Tour</em>",
+
+            image: "images/addis-city.jpg",
+
+            duration: "Full Day",
+
+            price: "$45",
+
+            description:
+                "Explore the fascinating capital of Ethiopia on a carefully designed journey through its history, culture, food and everyday life. This private experience combines the city's most important landmarks with authentic local moments."
+
+        },
+
+
+        "entoto": {
+
+            title: "Entoto Mountain <em>Experience</em>",
+
+            image: "images/entoto.jpg",
+
+            duration: "Half Day",
+
+            price: "$35",
+
+            description:
+                "Escape the busy city and explore Entoto Mountain, its beautiful eucalyptus forests, historic sites and spectacular views overlooking Addis Ababa."
+
+        },
+
+
+        "coffee": {
+
+            title: "Ethiopian Coffee <em>Experience</em>",
+
+            image: "images/coffee.jpg",
+
+            duration: "3 Hours",
+
+            price: "$30",
+
+            description:
+                "Discover the story of Ethiopian coffee through local cafés, traditional preparation and an authentic Ethiopian coffee ceremony."
+
+        },
+
+
+        "culture": {
+
+            title: "Ethiopian Culture <em>& Heritage</em>",
+
+            image: "images/ethiopia-culture.jpg",
+
+            duration: "Full Day",
+
+            price: "$55",
+
+            description:
+                "Experience Ethiopia's fascinating history, traditions, art and cultural heritage through carefully selected local experiences."
+
+        },
+
+
+        "lake-tana": {
+
+            title: "Lake Tana <em>Adventure</em>",
+
+            image: "images/lake-tana.jpg",
+
+            duration: "Multi Day",
+
+            price: "$180",
+
+            description:
+                "Discover Lake Tana, historic island monasteries, beautiful landscapes and fascinating local traditions."
+
+        },
+
+
+        "simien": {
+
+            title: "Simien Mountains <em>Adventure</em>",
+
+            image: "images/simien.jpg",
+
+            duration: "Multi Day",
+
+            price: "$250",
+
+            description:
+                "Trek through dramatic mountain landscapes, meet local communities and discover the unique wildlife of northern Ethiopia."
+
+        },
+
+
+        "food": {
+
+            title: "Addis Food <em>Discovery</em>",
+
+            image: "images/food-tour.jpg",
+
+            duration: "4 Hours",
+
+            price: "$40",
+
+            description:
+                "Taste authentic Ethiopian dishes, discover local restaurants and learn how traditional meals are prepared."
+
+        },
+
+
+        "lalibela": {
+
+            title: "Lalibela Heritage <em>Journey</em>",
+
+            image: "images/lalibela.jpg",
+
+            duration: "3 Days",
+
+            price: "$320",
+
+            description:
+                "Explore the extraordinary rock-hewn churches of Lalibela and discover one of Ethiopia's greatest historical treasures."
+
+        },
+
+
+        "mercato": {
+
+            title: "Mercato <em>& Local Life</em>",
+
+            image: "images/mercato.jpg",
+
+            duration: "4 Hours",
+
+            price: "$35",
+
+            description:
+                "Explore one of Africa's largest open-air markets, meet local traders and experience everyday Addis Ababa."
+
+        }
+
+    };
+
+
+    /* =====================================================
+       READ URL
+    ===================================================== */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const tourId =
+        params.get("tour") || "addis-city";
+
+
+    const tour =
+        tours[tourId] || tours["addis-city"];
+
+
+
+    /* =====================================================
+       UPDATE PAGE
+    ===================================================== */
+
+    document.title =
+        tour.title.replace(
+            /<[^>]*>/g,
+            ""
+        ) +
+        " | Discover Addis Tour";
+
+
+    document.getElementById("tourTitle")
+        .innerHTML = tour.title;
+
+
+    document.getElementById("tourDuration")
+        .textContent = tour.duration;
+
+
+    document.getElementById("bookingDuration")
+        .textContent = tour.duration;
+
+
+    document.getElementById("tourPrice")
+        .textContent = tour.price;
+
+
+    document.getElementById("tourDescription")
+        .textContent = tour.description;
+
+
+    document.getElementById("tourHero")
+        .style.backgroundImage =
+            `linear-gradient(
+                180deg,
+                rgba(0,0,0,.05),
+                rgba(0,0,0,.78)
+            ),
+            url("${tour.image}")`;
+
+
+
+    /* =====================================================
+       DATE
+    ===================================================== */
+
+    const dateInput =
+        document.getElementById(
+            "bookingDate"
+        );
+
+
+    if (dateInput) {
+
+        const today =
+            new Date()
+                .toISOString()
+                .split("T")[0];
+
+        dateInput.min = today;
+
+    }
+
+
+
+    /* =====================================================
+       BOOKING FORM
+    ===================================================== */
+
+    const bookingForm =
+        document.getElementById(
+            "bookingForm"
+        );
+
+
+    bookingForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const date =
+                dateInput.value;
+
+
+            const guests =
+                document.getElementById(
+                    "guests"
+                ).value;
+
+
+            if (!date) {
+
+                alert(
+                    "Please select your preferred travel date."
+                );
+
+                return;
+
+            }
+
+
+            const message =
+                `Hello Discover Addis Tour,%0A%0A` +
+                `I would like to book:%0A` +
+                `${tour.title.replace(/<[^>]*>/g, "")}%0A` +
+                `Date: ${date}%0A` +
+                `Guests: ${guests}%0A` +
+                `Price: ${tour.price} per person`;
+
+
+            window.open(
+                `https://wa.me/251900000000?text=${message}`,
+                "_blank"
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    document.querySelectorAll(
+        ".current-year"
+    ).forEach(element => {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

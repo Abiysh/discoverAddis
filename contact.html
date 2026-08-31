@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Discover Addis Tour</title>
+
+    <meta name="description"
+          content="Contact Discover Addis Tour to plan your Addis Ababa and Ethiopia travel experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           CONTACT HERO
+        ========================================= */
+
+        .contact-hero {
+            position: relative;
+            min-height: 480px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.65),
+                    rgba(0,0,0,.65)
+                ),
+                url("images/addis-city.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .contact-hero-content {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .contact-hero .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .contact-hero h1 {
+            margin: 15px 0 20px;
+
+            color: white;
+
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .98;
+        }
+
+        .contact-hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .contact-hero p {
+            max-width: 600px;
+            margin: auto;
+
+            color: rgba(255,255,255,.8);
+
+            font-size: .82rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           CONTACT SECTION
+        ========================================= */
+
+        .contact-section {
+            padding: 100px 0 120px;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                .85fr 1.15fr;
+
+            gap: 80px;
+
+            align-items: start;
+        }
+
+
+        /* =========================================
+           CONTACT INFORMATION
+        ========================================= */
+
+        .contact-info {
+            padding-top: 5px;
+        }
+
+        .contact-info h2 {
+            margin: 12px 0 18px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .contact-info h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .contact-info > p {
+            margin-bottom: 35px;
+
+            color: var(--muted);
+
+            font-size: .78rem;
+            line-height: 1.9;
+        }
+
+
+        .contact-details {
+            display: grid;
+
+            gap: 14px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 16px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 4px;
+
+            transition: var(--transition);
+        }
+
+        .contact-detail:hover {
+            border-color: var(--green);
+
+            transform: translateX(4px);
+        }
+
+        .contact-detail-icon {
+            width: 43px;
+            height: 43px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: var(--cream);
+
+            color: var(--green);
+
+            font-size: .75rem;
+        }
+
+        .contact-detail-content span {
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: var(--muted);
+
+            font-size: .52rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .contact-detail-content strong {
+            color: var(--dark);
+
+            font-size: .72rem;
+        }
+
+
+        /* =========================================
+           SOCIAL
+        ========================================= */
+
+        .contact-social {
+            margin-top: 35px;
+        }
+
+        .contact-social h4 {
+            margin-bottom: 14px;
+
+            font-size: .62rem;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .contact-social-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .contact-social-links a {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            color: var(--dark);
+
+            font-size: .65rem;
+
+            transition: var(--transition);
+        }
+
+        .contact-social-links a:hover {
+            border-color: var(--green);
+
+            background: var(--green);
+
+            color: white;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           CONTACT FORM
+        ========================================= */
+
+        .contact-form-wrapper {
+            padding: 42px;
+
+            border-radius: var(--radius);
+
+            background: var(--cream);
+        }
+
+        .contact-form-wrapper h3 {
+            margin-bottom: 8px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 2rem;
+        }
+
+        .contact-form-wrapper > p {
+            margin-bottom: 28px;
+
+            color: var(--muted);
+
+            font-size: .68rem;
+            line-height: 1.8;
+        }
+
+        .contact-form {
+            display: grid;
+
+            gap: 17px;
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-group label {
+            color: var(--dark);
+
+            font-size: .57rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .07em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 3px;
+
+            outline: none;
+
+            background: white;
+
+            color: var(--dark);
+
+            font-family: inherit;
+            font-size: .68rem;
+
+            transition: border-color .25s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--green);
+        }
+
+        .form-group textarea {
+            min-height: 145px;
+
+            resize: vertical;
+        }
+
+        .form-submit {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-top: 5px;
+        }
+
+        .submit-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 15px 25px;
+
+            border: none;
+            border-radius: 3px;
+
+            background: var(--green);
+            color: white;
+
+            font-family: inherit;
+            font-size: .63rem;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+        .submit-button:hover {
+            background: var(--dark);
+
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            color: var(--muted);
+
+            font-size: .55rem;
+        }
+
+
+        /* =========================================
+           WHATSAPP CARD
+        ========================================= */
+
+        .whatsapp-section {
+            padding: 0 0 100px;
+        }
+
+        .whatsapp-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 35px 40px;
+
+            border-radius: var(--radius);
+
+            background: var(--dark);
+
+            color: white;
+        }
+
+        .whatsapp-content {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+        }
+
+        .whatsapp-icon {
+            width: 52px;
+            height: 52px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #25D366;
+
+            color: white;
+
+            font-size: 1.25rem;
+        }
+
+        .whatsapp-content h3 {
+            margin-bottom: 5px;
+
+            color: white;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.35rem;
+        }
+
+        .whatsapp-content p {
+            color: rgba(255,255,255,.65);
+
+            font-size: .65rem;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 20px;
+
+            border-radius: 3px;
+
+            background: white;
+            color: var(--dark);
+
+            font-size: .62rem;
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            transition: var(--transition);
+        }
+
+        .whatsapp-button:hover {
+            background: #25D366;
+            color: white;
+        }
+
+
+        /* =========================================
+           FAQ
+        ========================================= */
+
+        .faq-section {
+            padding: 100px 0;
+
+            background: var(--cream);
+        }
+
+        .faq-heading {
+            max-width: 650px;
+
+            margin-bottom: 45px;
+        }
+
+        .faq-heading h2 {
+            margin-top: 10px;
+
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .faq-heading h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .faq-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+
+            border-radius: 4px;
+
+            background: white;
+
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 20px;
+
+            border: none;
+
+            background: white;
+
+            color: var(--dark);
+
+            font-family: inherit;
+
+            font-size: .68rem;
+            font-weight: 700;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            transition: transform .3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: max-height .35s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 20px;
+
+            color: var(--muted);
+
+            font-size: .65rem;
+
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .contact-hero {
+                min-height: 430px;
+            }
+
+            .contact-section {
+                padding: 75px 0 80px;
+            }
+
+            .contact-form-wrapper {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-submit {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .submit-button {
+                width: 100%;
+            }
+
+            .whatsapp-section {
+                padding-bottom: 75px;
+            }
+
+            .whatsapp-card {
+                flex-direction: column;
+                align-items: flex-start;
+
+                padding: 28px 24px;
+            }
+
+            .whatsapp-button {
+                width: 100%;
+
+                justify-content: center;
+            }
+
+            .faq-section {
+                padding: 75px 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html">
+                Tours
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html" class="mobile-book">
+            Book Your Trip
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="contact-hero">
+
+    <div class="container">
+
+        <div class="contact-hero-content">
+
+            <span class="eyebrow">
+                Let's Talk
+            </span>
+
+            <h1>
+                Your Ethiopia
+                <em>starts here.</em>
+            </h1>
+
+            <p>
+                Tell us what you're dreaming about.
+                We'll help you turn it into an unforgettable
+                Ethiopian experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section class="contact-section">
+
+    <div class="container contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <span class="eyebrow">
+                Get In Touch
+            </span>
+
+            <h2>
+                Let's plan your
+                <em>journey.</em>
+            </h2>
+
+            <p>
+                Whether you already know where you want to go
+                or need some inspiration, our team is here to help.
+                Send us a message and we'll get back to you.
+            </p>
+
+
+            <div class="contact-details">
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+                    <div class="contact-detail-content">
+
+                        <span>
+                            Visit Us
+                        </span>
+
+                        <strong>
+                            Addis Ababa, Ethiopia
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <div class="contact-detail-content">
+
+                        <span>
+                            Call Us
+                        </span>
+
+                        <strong>
+                            +251 900 000 000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+                    <div class="contact-detail-content">
+
+                        <span>
+                            Email Us
+                        </span>
+
+                        <strong>
+                            info@discoveraddistour.com
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <div class="contact-detail-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                    <div class="contact-detail-content">
+
+                        <span>
+                            Opening Hours
+                        </span>
+
+                        <strong>
+                            Monday – Saturday · 8:00 – 18:00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="contact-social">
+
+                <h4>
+                    Follow Our Journey
+                </h4>
+
+                <div class="contact-social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <div class="contact-form-wrapper">
+
+            <h3>
+                Send us a message
+            </h3>
+
+            <p>
+                Complete the form below and we'll respond
+                as soon as possible.
+            </p>
+
+
+            <form
+                class="contact-form"
+                id="contactForm">
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone / WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+251...">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="tour">
+                            Interested In
+                        </label>
+
+                        <select
+                            id="tour"
+                            name="tour">
+
+                            <option value="">
+                                Select an option
+                            </option>
+
+                            <option>
+                                Addis Ababa City Tour
+                            </option>
+
+                            <option>
+                                Food & Coffee Tour
+                            </option>
+
+                            <option>
+                                Cultural Experience
+                            </option>
+
+                            <option>
+                                Nature & Hiking
+                            </option>
+
+                            <option>
+                                Multi-Day Ethiopia Tour
+                            </option>
+
+                            <option>
+                                Custom Tour
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Preferred Travel Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Tell Us About Your Trip
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us where you'd like to go, how many people are traveling, and what you'd like to experience..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-submit">
+
+                    <span class="form-note">
+                        We normally reply within 24 hours.
+                    </span>
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Send Message
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHATSAPP
+========================================= -->
+
+<section class="whatsapp-section">
+
+    <div class="container">
+
+        <div class="whatsapp-card">
+
+
+            <div class="whatsapp-content">
+
+                <div class="whatsapp-icon">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Prefer WhatsApp?
+                    </h3>
+
+                    <p>
+                        Send us a message directly and
+                        let's start planning your trip.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/251900000000"
+                target="_blank"
+                class="whatsapp-button">
+
+                Chat on WhatsApp
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+
+        <div class="faq-heading">
+
+            <span class="eyebrow">
+                Questions
+            </span>
+
+            <h2>
+                Before you
+                <em>reach out.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="faq-grid">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    How far in advance should I book?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We recommend booking as early as possible,
+                        especially for private tours and multi-day
+                        trips. However, last-minute bookings may
+                        also be possible depending on availability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Can you create a custom itinerary?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. We can create a personalized itinerary
+                        based on your interests, available time,
+                        group size and preferred travel style.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Do you offer airport pickup?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Airport pickup and transportation can be
+                        arranged as part of your tour or travel
+                        package.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Are your tours private?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We offer private experiences as well as
+                        options for travelers who prefer joining
+                        a small group.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    What payment methods do you accept?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Payment options can vary depending on
+                        the tour. Contact us and we'll explain
+                        the available payment methods for your
+                        booking.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Can I book through WhatsApp?
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. You can contact us through WhatsApp
+                        to discuss your trip and start the booking
+                        process.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +251 900 000 000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@discoveraddistour.com
+            </p>
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     FLOATING WHATSAPP
+========================================= -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================
+           CONTACT FORM
+        ===================================== */
+
+        const form =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const button =
+                    form.querySelector(
+                        ".submit-button"
+                    );
+
+
+                button.innerHTML =
+                    'Message Sent ✓';
+
+
+                button.style.background =
+                    "#1f6b45";
+
+
+                form.reset();
+
+            }
+        );
+
+
+
+        /* =====================================
+           FAQ
+        ===================================== */
+
+        const questions =
+            document.querySelectorAll(
+                ".faq-question"
+            );
+
+
+        questions.forEach(question => {
+
+            question.addEventListener(
+                "click",
+                function () {
+
+                    const current =
+                        this.closest(
+                            ".faq-item"
+                        );
+
+
+                    document
+                        .querySelectorAll(
+                            ".faq-item"
+                        )
+                        .forEach(item => {
+
+                            if (
+                                item !== current
+                            ) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+
+                        });
+
+
+                    current.classList.toggle(
+                        "active"
+                    );
+
+                }
+            );
+
+        });
+
+
+
+        /* =====================================
+           YEAR
+        ===================================== */
+
+        document
+            .querySelectorAll(
+                ".current-year"
+            )
+            .forEach(element => {
+
+                element.textContent =
+                    new Date().getFullYear();
+
+            });
+
+    });
+
+</script>
+
+
+</body>
+</html>

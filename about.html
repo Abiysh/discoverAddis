@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Discover Addis Tour</title>
+
+    <meta name="description"
+        content="Learn more about Discover Addis Tour and our mission to create authentic Ethiopian travel experiences.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           ABOUT HERO
+        ========================================= */
+
+        .about-hero {
+            position: relative;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .72),
+                    rgba(0, 0, 0, .20)
+                ),
+                url("images/addis-hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .about-hero-content {
+            max-width: 780px;
+            padding: 90px 0;
+        }
+
+        .about-hero .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .about-hero h1 {
+            margin: 15px 0 22px;
+            color: white;
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .98;
+        }
+
+        .about-hero h1 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .about-hero p {
+            max-width: 620px;
+            color: rgba(255,255,255,.82);
+            font-size: .88rem;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           STORY
+        ========================================= */
+
+        .about-story {
+            padding: 110px 0;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .story-images {
+            position: relative;
+            min-height: 560px;
+        }
+
+        .story-image-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 78%;
+            height: 480px;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+
+        .story-image-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-image-small {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 48%;
+            height: 280px;
+            overflow: hidden;
+            border: 8px solid white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-large);
+        }
+
+        .story-image-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-badge {
+            position: absolute;
+            left: 25px;
+            bottom: 45px;
+            z-index: 5;
+
+            width: 120px;
+            height: 120px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+
+            text-align: center;
+            box-shadow: var(--shadow-large);
+        }
+
+        .story-badge strong {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5rem;
+        }
+
+        .story-badge span {
+            font-size: .55rem;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+
+        .story-content .eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .story-content h2 {
+            margin-bottom: 25px;
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            line-height: 1.05;
+        }
+
+        .story-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .story-content p {
+            margin-bottom: 18px;
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.9;
+        }
+
+        .story-signature {
+            margin-top: 35px;
+            color: var(--green);
+            font-family: "Playfair Display", serif;
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+
+
+        /* =========================================
+           VALUES
+        ========================================= */
+
+        .values-section {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .section-heading {
+            max-width: 650px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            margin-top: 10px;
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .section-heading h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .section-heading p {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .value-card {
+            padding: 35px 28px;
+            background: white;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-icon {
+            width: 55px;
+            height: 55px;
+            margin-bottom: 25px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--green);
+
+            font-size: 1.1rem;
+        }
+
+        .value-card h3 {
+            margin-bottom: 12px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.25rem;
+        }
+
+        .value-card p {
+            color: var(--muted);
+            font-size: .7rem;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           WHY US
+        ========================================= */
+
+        .why-section {
+            padding: 110px 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            margin: 10px 0 25px;
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.05;
+        }
+
+        .why-content h2 em {
+            color: var(--green);
+            font-style: italic;
+        }
+
+        .why-content > p {
+            margin-bottom: 30px;
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.9;
+        }
+
+        .why-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .why-number {
+            flex: 0 0 auto;
+
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+
+            font-family: "Playfair Display", serif;
+            font-size: .8rem;
+        }
+
+        .why-item h3 {
+            margin-bottom: 5px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.05rem;
+        }
+
+        .why-item p {
+            color: var(--muted);
+            font-size: .68rem;
+            line-height: 1.7;
+        }
+
+        .why-image {
+            height: 620px;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+
+        .why-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats-section {
+            padding: 75px 0;
+            background: var(--dark);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            margin-bottom: 8px;
+
+            color: var(--gold-light);
+
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+        }
+
+        .stat span {
+            color: rgba(255,255,255,.65);
+            font-size: .62rem;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+        }
+
+
+        /* =========================================
+           TEAM
+        ========================================= */
+
+        .team-section {
+            padding: 110px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .team-card {
+            overflow: hidden;
+            border-radius: var(--radius);
+            background: var(--cream);
+        }
+
+        .team-image {
+            height: 370px;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .team-card:hover .team-image img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h3 {
+            margin-bottom: 5px;
+            font-family: "Playfair Display", serif;
+            font-size: 1.3rem;
+        }
+
+        .team-role {
+            color: var(--green);
+            font-size: .6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .team-info p {
+            margin-top: 15px;
+            color: var(--muted);
+            font-size: .68rem;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .about-cta {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.68),
+                    rgba(0,0,0,.68)
+                ),
+                url("images/ethiopia-culture.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .about-cta-content {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .about-cta .eyebrow {
+            color: var(--gold-light);
+        }
+
+        .about-cta h2 {
+            margin: 15px 0 20px;
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.05;
+        }
+
+        .about-cta h2 em {
+            color: var(--gold-light);
+            font-style: italic;
+        }
+
+        .about-cta p {
+            margin-bottom: 30px;
+            color: rgba(255,255,255,.78);
+            font-size: .8rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            padding: 15px 25px;
+            border-radius: 3px;
+            background: var(--green);
+            color: white;
+            font-size: .68rem;
+            font-weight: 700;
+        }
+
+        .cta-secondary {
+            padding: 15px 25px;
+            border: 1px solid rgba(255,255,255,.45);
+            border-radius: 3px;
+            color: white;
+            font-size: .68rem;
+            font-weight: 700;
+        }
+
+        .cta-primary:hover {
+            background: white;
+            color: var(--green);
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .story-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+            .why-image {
+                height: 500px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 45px;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .about-hero {
+                min-height: 500px;
+            }
+
+            .story-images {
+                min-height: 450px;
+            }
+
+            .story-image-main {
+                height: 380px;
+            }
+
+            .story-image-small {
+                height: 210px;
+            }
+
+            .story-badge {
+                width: 95px;
+                height: 95px;
+                left: 10px;
+            }
+
+            .story-badge strong {
+                font-size: 1.1rem;
+            }
+
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-image {
+                height: 400px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                DAT
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Discover Addis
+                </strong>
+
+                <small>
+                    TOUR & TRAVEL
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="tours.html">
+                Tours
+            </a>
+
+            <a href="about.html" class="active">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="header-book">
+
+            Book Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="tours.html">
+            Tours
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="blog.html">
+            Blog
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="contact.html" class="mobile-book">
+            Book Your Trip
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+            <span class="eyebrow">
+                Our Story
+            </span>
+
+            <h1>
+                Ethiopia is not
+                just a place.
+                <em>It's a feeling.</em>
+            </h1>
+
+            <p>
+                We created Discover Addis Tour to help travelers
+                experience Ethiopia beyond the usual tourist route —
+                through its people, food, history, landscapes and
+                unforgettable hospitality.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STORY
+========================================= -->
+
+<section class="about-story">
+
+    <div class="container story-grid">
+
+
+        <div class="story-images">
+
+            <div class="story-image-main">
+
+                <img
+                    src="images/addis-city.jpg"
+                    alt="Addis Ababa city">
+
+            </div>
+
+
+            <div class="story-image-small">
+
+                <img
+                    src="images/coffee.jpg"
+                    alt="Traditional Ethiopian coffee">
+
+            </div>
+
+
+            <div class="story-badge">
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Local
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <span class="eyebrow">
+                Who We Are
+            </span>
+
+            <h2>
+                Travel Ethiopia
+                <em>with people who know it.</em>
+            </h2>
+
+            <p>
+                Discover Addis Tour is a locally focused travel
+                company based in Addis Ababa, Ethiopia. Our goal
+                is simple: create memorable experiences that allow
+                visitors to see Ethiopia from a local perspective.
+            </p>
+
+            <p>
+                From the busy streets of Addis Ababa to ancient
+                heritage sites, dramatic mountains and traditional
+                coffee ceremonies, we connect travelers with the
+                places and people that make Ethiopia special.
+            </p>
+
+            <p>
+                We believe the best travel experiences are not only
+                about taking photographs. They are about meeting
+                people, understanding cultures, tasting local food,
+                hearing stories and creating memories that stay
+                with you long after you leave.
+            </p>
+
+            <div class="story-signature">
+                — Discover Ethiopia with us.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
+
+<section class="values-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                What We Believe
+            </span>
+
+            <h2>
+                Travel with
+                <em>purpose.</em>
+            </h2>
+
+            <p>
+                Our tours are designed around the things that
+                matter most: authentic experiences, responsible
+                travel and genuine Ethiopian hospitality.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>
+                    Authenticity
+                </h3>
+
+                <p>
+                    We focus on genuine experiences rather than
+                    manufactured tourism. See Ethiopia as locals
+                    experience it.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <h3>
+                    Local Connection
+                </h3>
+
+                <p>
+                    Our guides and partners help travelers connect
+                    with local communities, traditions and stories.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h3>
+                    Responsible Travel
+                </h3>
+
+                <p>
+                    We encourage respectful travel that supports
+                    local businesses and communities.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    Every itinerary is designed with comfort,
+                    flexibility and memorable experiences in mind.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHY US
+========================================= -->
+
+<section class="why-section">
+
+    <div class="container why-grid">
+
+
+        <div class="why-content">
+
+            <span class="eyebrow">
+                Why Discover Addis?
+            </span>
+
+            <h2>
+                Your trip should feel
+                <em>personal.</em>
+            </h2>
+
+            <p>
+                Ethiopia is a country with thousands of stories.
+                Instead of rushing from one attraction to another,
+                we want you to experience those stories at your
+                own pace.
+            </p>
+
+
+            <div class="why-list">
+
+
+                <div class="why-item">
+
+                    <div class="why-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Local Knowledge
+                        </h3>
+
+                        <p>
+                            Our local perspective helps you discover
+                            places and experiences beyond the standard
+                            tourist route.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="why-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Flexible Experiences
+                        </h3>
+
+                        <p>
+                            We can adapt your experience around your
+                            interests, schedule and travel style.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="why-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Personal Service
+                        </h3>
+
+                        <p>
+                            From your first message to the end of
+                            your journey, we are here to help.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="why-item">
+
+                    <div class="why-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ethiopian Hospitality
+                        </h3>
+
+                        <p>
+                            Experience the warmth and generosity that
+                            make Ethiopian hospitality so memorable.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-image">
+
+            <img
+                src="images/ethiopia-culture.jpg"
+                alt="Ethiopian culture">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
+<section class="stats-section">
+
+    <div class="container stats-grid">
+
+
+        <div class="stat">
+
+            <strong>
+                9+
+            </strong>
+
+            <span>
+                Tour Experiences
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Local Perspective
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                24/7
+            </strong>
+
+            <span>
+                Travel Support
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                1
+            </strong>
+
+            <span>
+                Amazing Country
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     TEAM
+========================================= -->
+
+<section class="team-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Meet The Team
+            </span>
+
+            <h2>
+                People behind
+                <em>your journey.</em>
+            </h2>
+
+            <p>
+                Our team combines local knowledge, hospitality
+                and a passion for showing travelers the real
+                Ethiopia.
+            </p>
+
+        </div>
+
+
+        <div class="team-grid">
+
+
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img
+                        src="images/team-guide.jpg"
+                        alt="Tour guide">
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>
+                        Your Local Guide
+                    </h3>
+
+                    <span class="team-role">
+                        Tour Guide
+                    </span>
+
+                    <p>
+                        Passionate about Ethiopian history,
+                        culture and sharing meaningful stories
+                        with travelers.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img
+                        src="images/team-driver.jpg"
+                        alt="Professional driver">
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>
+                        Our Driver
+                    </h3>
+
+                    <span class="team-role">
+                        Transport & Logistics
+                    </span>
+
+                    <p>
+                        Helping travelers move comfortably and
+                        safely throughout their Ethiopian journey.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card">
+
+                <div class="team-image">
+
+                    <img
+                        src="images/team-host.jpg"
+                        alt="Ethiopian host">
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>
+                        Local Hosts
+                    </h3>
+
+                    <span class="team-role">
+                        Culture & Hospitality
+                    </span>
+
+                    <p>
+                        Connecting visitors with authentic food,
+                        coffee, traditions and everyday Ethiopian life.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="about-cta">
+
+    <div class="container">
+
+        <div class="about-cta-content">
+
+            <span class="eyebrow">
+                Ready To Explore?
+            </span>
+
+            <h2>
+                Your Ethiopian
+                <em>story starts here.</em>
+            </h2>
+
+            <p>
+                Tell us what kind of experience you are looking for
+                and we'll help you create an unforgettable journey
+                through Ethiopia.
+            </p>
+
+
+            <div class="cta-buttons">
+
+                <a
+                    href="tours.html"
+                    class="cta-primary">
+
+                    Explore Tours
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="cta-secondary">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand footer-logo">
+
+                <span class="brand-mark">
+                    DAT
+                </span>
+
+                <span class="brand-text">
+
+                    <strong style="color:white;">
+                        Discover Addis
+                    </strong>
+
+                    <small>
+                        TOUR & TRAVEL
+                    </small>
+
+                </span>
+
+            </a>
+
+            <p>
+                Authentic Ethiopian experiences,
+                thoughtfully designed by locals who
+                love sharing their country.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="tours.html">
+                All Tours
+            </a>
+
+            <a href="tours.html">
+                City Tours
+            </a>
+
+            <a href="tours.html">
+                Culture
+            </a>
+
+            <a href="tours.html">
+                Nature
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="blog.html">
+                Travel Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Addis Ababa, Ethiopia
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +251 900 000 000
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@discoveraddistour.com
+            </p>
+
+            <a
+                href="https://wa.me/251900000000"
+                class="footer-contact-link">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <p>
+            © <span class="current-year"></span>
+            Discover Addis Tour.
+            All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/251900000000"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<script src="js/script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const year =
+        document.querySelector(".current-year");
+
+    if (year) {
+        year.textContent =
+            new Date().getFullYear();
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
